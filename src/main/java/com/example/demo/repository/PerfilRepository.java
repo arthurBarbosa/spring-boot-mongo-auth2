@@ -4,12 +4,11 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
+import com.example.demo.entity.Perfil;
 import com.example.demo.entity.Usuario;
 
-public interface UsuarioRepository  extends MongoRepository<Usuario, String>{
+public interface PerfilRepository  extends MongoRepository<Perfil, String>{
 	
-	List<Usuario> findByNomeLikeIgnoreCase(String nome);
-
-	Usuario findByEmail(String username);
+	List<Perfil> findByNomeLikeIgnoreCase(String nome);
 
 }
